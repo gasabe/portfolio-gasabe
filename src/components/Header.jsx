@@ -1,4 +1,5 @@
 import React from 'react';
+import { TypeAnimation } from 'react-type-animation';
 import '../styles/Header.css';
 
 const links = [
@@ -11,7 +12,7 @@ const links = [
 export default function Header({ activeSection, setActiveSection }) {
   return (
     <header className="header">
-      <h1 className="header-title">Gastón Ezequiel Abelardo</h1>
+      <h1 className="header-title"> Portfolio </h1>
       <nav className="nav-links">
         {links.map(({ id, label }) => (
           <button
