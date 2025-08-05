@@ -5,10 +5,10 @@ body {
   color: #333;
 }
 
-.app-container {
+.home-container {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  min-height: auto;
 }
 
 .home-content {
@@ -19,4 +19,8 @@ body {
   padding: 25px 30px;
   border-radius: 10px;
   box-shadow: 0 4px 12px rgba(100, 116, 139, 0.15);
+}
+
+.text-secondary {
+  color: #007acc; /* Cambialo si querés otro color */
 }

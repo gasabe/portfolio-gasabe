@@ -1,0 +1,177 @@
+:root {
+  /* Paleta personalizada */
+  --primary-darkest: #141937;   /* fondo principal */
+  --primary-darker:  #212C42;   /* header/nav/footer */
+  --primary-accent:  #1F636B;   /* botones, enlaces */
+  --primary-light:   #F3EFEB;   /* textos claros, fondos */
+  --primary-contrast: #ffffff;
+  --primary-board: #3fc4b2;  /* texto sobre oscuro */
+
+  /* Derivados neutros para mantener balance */
+  --neutral-50: #f6f6f6;
+  --neutral-100: #eeeeee;
+  --neutral-200: #dcdcdc;
+  --neutral-300: #c0c0c0;
+  --neutral-400: #a6a6a6;
+  --neutral-500: #8c8c8c;
+  --neutral-600: #737373;
+  --neutral-700: #5a5a5a;
+  --neutral-800: #414141;
+  --neutral-900: #292929;
+}
+
+/* Fondo animado */
+.gradient-bg {
+  position: relative;
+  min-height: 100vh;
+  background: var(--primary-darkest);
+  overflow: hidden;
+}
+
+.gradient-animation {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    135deg,
+    var(--primary-darker) 0%,
+    var(--primary-accent) 30%,
+    var(--primary-darkest) 70%,
+    var(--neutral-800) 100%
+  );
+  background-size: 400% 400%;
+  animation: gradient-movement 16s ease infinite;
+  z-index: 0;
+  opacity: 0.7;
+}
+
+@keyframes gradient-movement {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Contenedor principal */
+.layout-content--login {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 13px;
+  position: relative;
+  z-index: 1;
+}
+
+/* Logo */
+.logo-container {
+  margin-bottom: 10px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.logo-image {
+  max-width: 280px;
+  max-height: 280px;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.1));
+  transition: all 0.4s ease;
+  z-index: 2;
+  border-radius: 8px;
+}
+
+.logo-image:hover {
+  transform: scale(1.05);
+  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.2));
+}
+
+/* Formulario con borde animado */
+.login-form {
+  font-family: 'Roboto', sans-serif;
+  width: 90%;
+  max-width: 420px;
+  padding: 40px 30px;
+  background:  var(--primary-board) ;
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(8px);
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.1);
+}
+
+.login-form::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(45deg, #1F636B, #212C42, #141937);
+  z-index: -1;
+  border-radius: 22px;
+  animation: rotateBorder 4s linear infinite;
+  opacity: 0.6;
+}
+
+.login-form::after {
+  content: '';
+  position: absolute;
+  inset: 3px;
+  border-radius: 18px;
+  background: var(--primary-light);
+  z-index: -1;
+}
+
+.login-form:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes rotateBorder {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Botón gradiente */
+.button-gradient {
+  margin: 32px 0 24px 0;
+  padding: 14px 0;
+  font-size: 16px;
+  font-weight: 700;
+  background: linear-gradient(to right, var(--primary-accent), var(--primary-darker)) !important;
+  border: none;
+  border-radius: 12px;
+  color: var(--primary-contrast) !important;
+  text-transform: none;
+  transition: all 0.3s ease;
+  width: 100%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.button-gradient:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .logo-image { max-width: 220px; }
+  .login-form { padding: 32px 24px; }
+}
+
+@media (max-width: 480px) {
+  .logo-image { max-width: 200px; }
+  .login-form {
+    padding: 28px 20px;
+    width: 95%;
+  }
+  .button-gradient {
+    margin: 28px 0 20px 0;
+    padding: 12px 0;
+  }
+}
