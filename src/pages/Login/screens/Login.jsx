@@ -1,11 +1,9 @@
-import { Box, Button, Typography } from "@mui/material";
-import { useNavigate } from "react-router-dom";
+import { Box, Button } from "@mui/material";
 import "../screens/Login.css";
 
 const logo = "https://avatars.githubusercontent.com/u/110560590?v=4";
 
 function Login( ) {
-  const navigate = useNavigate();
 
 const handleLogin = () => {
   localStorage.setItem("loggedIn", "true");
