@@ -1,30 +1,29 @@
 import { Box, Button } from "@mui/material";
+import { useNavigate } from 'react-router-dom';
 import "../screens/Login.css";
 
-const logo = "https://avatars.githubusercontent.com/u/110560590?v=4";
+function Login() {
+  const navigate = useNavigate();
 
-function Login( ) {
-
-const handleLogin = () => {
-  localStorage.setItem("loggedIn", "true");
-  window.location.href = "/home/experience"; // o window.location.reload();
-};
+  const handleEnter = () => {
+    navigate('/home'); // Navegación directa sin localStorage
+  };
 
   return (
     <div className="layout-content layout-content--login gradient-bg">
       <div className="gradient-animation"></div>
 
       <Box className="login-form">
-        <div class="logo-container">
-          <div class="logo-frame">
-            <img class="logo-image" src={logo} alt="Logo" />
+        <div className="logo-container">
+          <div className="logo-frame">
+            <img className="logo-image" src="https://avatars.githubusercontent.com/u/110560590?v=4" alt="Logo" />
           </div>
         </div>
         <Button
           className="button-gradient"
           variant="contained"
           fullWidth
-          onClick={handleLogin}
+          onClick={handleEnter}
           sx={{
             mt: 4,
             py: 2,

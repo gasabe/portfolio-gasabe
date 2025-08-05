@@ -10,10 +10,12 @@ const links = [
 ];
 
 export default function Header() {
-  const handleLogout = () => {
-    localStorage.setItem("loggedIn", "false");
-    window.location.href = "/login"; // recarga la app y se redirige
-  };
+
+const handleLogout = () => {
+  localStorage.removeItem('loggedIn');
+  window.dispatchEvent(new Event('storage')); 
+  window.location.href = '/login'; 
+};
 
   return (
     <header className="header">
@@ -32,7 +34,10 @@ export default function Header() {
           </NavLink>
         ))}
         <NavLink
-          onClick={() => {handleLogout()}}
+          onClick={(e) => {
+            e.preventDefault();
+            handleLogout();
+          }}
           to="/login"
           className="nav-button logout-button"
           style={{
