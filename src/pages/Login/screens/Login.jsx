@@ -4,23 +4,24 @@ import "../screens/Login.css";
 
 const logo = "https://avatars.githubusercontent.com/u/110560590?v=4";
 
-function Login() {
+function Login( ) {
   const navigate = useNavigate();
 
-  const handleLogin = () => {
-    navigate("/experience");
-  };
+const handleLogin = () => {
+  localStorage.setItem("loggedIn", "true");
+  window.location.href = "/home/experience"; // o window.location.reload();
+};
 
   return (
     <div className="layout-content layout-content--login gradient-bg">
       <div className="gradient-animation"></div>
 
       <Box className="login-form">
-      <div class="logo-container">
-        <div class="logo-frame">
-          <img class="logo-image" src= {logo} alt="Logo" />
+        <div class="logo-container">
+          <div class="logo-frame">
+            <img class="logo-image" src={logo} alt="Logo" />
+          </div>
         </div>
-      </div>
         <Button
           className="button-gradient"
           variant="contained"

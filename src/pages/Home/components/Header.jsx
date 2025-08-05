@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-import LogoutIcon from '@mui/icons-material/Logout';
+import LogoutIcon from "@mui/icons-material/Logout";
 import "../styles/Header.css";
 
 const links = [
@@ -10,6 +10,11 @@ const links = [
 ];
 
 export default function Header() {
+  const handleLogout = () => {
+    localStorage.setItem("loggedIn", "false");
+    window.location.href = "/login"; // recarga la app y se redirige
+  };
+
   return (
     <header className="header">
       <h1 className="header-title">Portfolio</h1>
@@ -17,7 +22,7 @@ export default function Header() {
         {links.map(({ id, label }) => (
           <NavLink
             key={id}
-            to={`/${id}`}
+            to={`/home/${id}`}
             className={({ isActive }) =>
               `nav-button ${isActive ? "active" : ""}`
             }
@@ -27,6 +32,7 @@ export default function Header() {
           </NavLink>
         ))}
         <NavLink
+          onClick={() => {handleLogout()}}
           to="/login"
           className="nav-button logout-button"
           style={{
