@@ -31,13 +31,13 @@ function Login() {
           <br /> de <br /> Gastón Ezequiel Abelardo
         </h1>
         <div className="especialization">
-          Técnico
+          Técnico en
           <br />
           <TypeAnimation
             sequence={[
               "Electrónico",
               1500,
-              "en Programación informática",
+              "Programación informática",
               1500,
             ]}
             wrapper="span"
