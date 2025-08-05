@@ -35,7 +35,7 @@ function Login() {
           <br />
           <TypeAnimation
             sequence={[
-              "Electrónico",
+              "Electrónica",
               1500,
               "Programación informática",
               1500,
