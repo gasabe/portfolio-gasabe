@@ -1,5 +1,6 @@
 import { Box, Button } from "@mui/material";
 import { useNavigate } from "react-router-dom";
+import { TypeAnimation } from "react-type-animation";
 import "../screens/Login.css";
 
 function Login() {
@@ -29,6 +30,23 @@ function Login() {
           Portfolio
           <br /> de <br /> Gastón Ezequiel Abelardo
         </h1>
+        <div className="especialization">
+          Técnico
+          <br />
+          <TypeAnimation
+            sequence={[
+              "Electrónico",
+              1500,
+              "en Programación informática",
+              1500,
+            ]}
+            wrapper="span"
+            speed={50}
+            repeat={Infinity}
+            className="text-secondary text-xl sm:text-2xl font-bold"
+          />
+        </div>
+
         <Button
           className="button-gradient"
           variant="contained"

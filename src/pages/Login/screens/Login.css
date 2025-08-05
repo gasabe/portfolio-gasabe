@@ -7,6 +7,7 @@
   --primary-contrast: #ffffff;
   --primary-board: #3fc4b2;  /* texto sobre oscuro */
   --primary-name: #5d64c4;
+  --primary-name: #007ACC;
 
   /* Derivados neutros para mantener balance */
   --neutral-50: #f6f6f6;
@@ -30,6 +31,15 @@
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
+  animation: fadeIn 1s ease-in-out;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.especialization{
+  font-size: 1.5rem;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 20px;
+  color: var(--primary-name);
   animation: fadeIn 1s ease-in-out;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
