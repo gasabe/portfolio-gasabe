@@ -1,12 +1,12 @@
 import { Box, Button } from "@mui/material";
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
 import "../screens/Login.css";
 
 function Login() {
   const navigate = useNavigate();
 
   const handleEnter = () => {
-    navigate('/home'); // Navegación directa sin localStorage
+    navigate("/home"); // Navegación directa sin localStorage
   };
 
   return (
@@ -16,9 +16,19 @@ function Login() {
       <Box className="login-form">
         <div className="logo-container">
           <div className="logo-frame">
-            <img className="logo-image" src="https://avatars.githubusercontent.com/u/110560590?v=4" alt="Logo" />
+            <img
+              className="logo-image"
+              src="https://avatars.githubusercontent.com/u/110560590?v=4"
+              alt="Logo"
+            />
           </div>
         </div>
+        <h1 className="portfolio-name">Bienvenid@</h1>
+        <h1 className="portfolio-name">
+          {" "}
+          Portfolio
+          <br /> de <br /> Gastón Ezequiel Abelardo
+        </h1>
         <Button
           className="button-gradient"
           variant="contained"

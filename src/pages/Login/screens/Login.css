@@ -6,6 +6,7 @@
   --primary-light:   #F3EFEB;   /* textos claros, fondos */
   --primary-contrast: #ffffff;
   --primary-board: #3fc4b2;  /* texto sobre oscuro */
+  --primary-name: #5d64c4;
 
   /* Derivados neutros para mantener balance */
   --neutral-50: #f6f6f6;
@@ -19,6 +20,32 @@
   --neutral-800: #414141;
   --neutral-900: #292929;
 }
+
+.portfolio-name {
+  font-size: 2rem;
+  font-weight: 6000;
+  text-align: center;
+  margin-bottom: 20px;
+  background: linear-gradient(45deg,var(--primary-board), var(--primary-name));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: fadeIn 1s ease-in-out;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
 
 /* Fondo animado */
 .gradient-bg {
