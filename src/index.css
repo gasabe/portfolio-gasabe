@@ -1,13 +1,28 @@
+/* index.css */
+html,
 body {
+  height: 100%;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  background: #0a1128; /* Color de fondo oscuro para eliminar franja blanca */
+  box-shadow: 0 0 0px rgba(0, 0, 0, 1.15);
+  background: linear-gradient(
+    -135deg,
+    var(--primary-darker) 0%,
+    var(--primary-accent) 30%,
+    var(--primary-darkest) 70%,
+    var(--neutral-800) 100%
+  );
+  background-size: 400% 400%;
+  animation: gradient-movement 16s ease infinite;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
