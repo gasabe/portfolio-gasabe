@@ -24,7 +24,7 @@ function Login() {
             />
           </div>
         </div>
-        <h1 className="portfolio-name">Bienvenid@</h1>
+
         <h1 className="portfolio-name">
           {" "}
           Portfolio
