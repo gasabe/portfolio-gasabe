@@ -21,6 +21,28 @@ body {
   box-shadow: 0 4px 12px rgba(100, 116, 139, 0.15);
 }
 
+.home-card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+  padding: 32px;
+  justify-items: center;
+}
+
+.home-title {
+  font-size: 2rem;
+  font-weight: 600;
+  text-align: center;
+  background: var(--primary-darkest);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: fadeIn 1s ease-in-out;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin-bottom: 0.5rem;
+}
+
+
 .text-secondary {
   color: #007acc; /* Cambialo si querés otro color */
 }
