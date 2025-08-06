@@ -1,10 +1,11 @@
 import { Routes, Route, Navigate } from 'react-router-dom';
 import Home from './pages/Home/Home';
-import Login from '../src/pages/Login/screens/Login';
-import Experience from '../src/pages/Home/pages/Experience';
-import Projects from '../src/pages/Home/pages/Projects';
-import About from '../src/pages/Home/pages/About';
-import Contact from '../src/pages/Home/pages/Contact';
+import Login from './pages/Login/screens/Login';
+import Experience from './pages/Home/pages/Experience';
+import Projects from './pages/Home/pages/Projects';
+import About from './pages/Home/pages/About';
+import Contact from './pages/Home/pages/Contact';
+
 export default function App() {
   return (
     <Routes>
@@ -18,5 +19,5 @@ export default function App() {
       </Route>
       <Route path="*" element={<Navigate to="/" replace />} />
     </Routes>
-  );
+  )
 }
