@@ -2,7 +2,6 @@ import React from 'react';
 import {
   Card, CardContent, CardMedia, Typography, Box, Button
 } from '@mui/material';
-import "../Login/screens/Login.css";
 
 const ProjectCard = ({
   title,
@@ -11,24 +10,24 @@ const ProjectCard = ({
   repoLink,
   sx = {},
 }) => {
-  const cardImage = image || NoPhoto;
+  const cardImage = image || "/default.jpg";
 
   return (
     <Card
       sx={{
-        width: 345,
-        maxHeight: 400,
+        width: "100%",
+        maxWidth: 345,
+        minHeight: 400,
         borderRadius: 3,
         background: "linear-gradient(45deg, var(--primary-darker), var(--primary-name))",
-        //border: '1px solid rgba(2, 0, 5, 0.8)',
         boxShadow: '3px 4px 15px rgba(0, 0, 0, 0.1)',
         display: 'flex',
-        color: "white", 
         flexDirection: 'column',
+        color: "white",
         transition: 'transform 0.2s ease, box-shadow 0.2s ease',
         '&:hover': {
           transform: 'translateY(-2px)',
-          boxShadow: '0 25px 15px rgba(0, 0, 0, 0.61)',
+          boxShadow: '0 3.5px 15px rgba(0, 0, 0, 0.61)',
         },
         ...sx,
       }}
@@ -38,6 +37,7 @@ const ProjectCard = ({
         height="180"
         image={cardImage}
         alt={title || 'imagen'}
+        sx={{ objectFit: "cover", width: "100%" }}
       />
       <CardContent
         sx={{
@@ -48,12 +48,7 @@ const ProjectCard = ({
         }}
       >
         {title && (
-          <Typography
-            gutterBottom
-            variant="h6"
-            component="div"
-            sx={{ height: 48 }}
-          >
+          <Typography gutterBottom variant="h6" component="div" sx={{ height: 48 }}>
             {title}
           </Typography>
         )}

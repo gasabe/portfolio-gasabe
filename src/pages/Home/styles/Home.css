@@ -1,48 +1,84 @@
+/* Layout general */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #0f2027, #203a43, #2c5364);
+}
+
+/* Área principal donde se renderiza cada subpágina */
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 1.5rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Carrusel centrado y responsive */
+.slick-slide {
+  display: flex !important;
+  justify-content: center;
+  box-sizing: border-box;
+
+}
+
+.slick-slide > div {
+  display: flex;
+  justify-content: center;
+  padding: 25px;
+  box-sizing: border-box;
+  max-width: 360px;
+  width: 100%;
+}
+
+.slick-list {
+  overflow: hidden;
+}
+
+/* Estilos generales */
 body {
   margin: 0;
   background: #f5f7fa;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  color: #333;
-}
-
-.home-container {
-  display: flex;
-  flex-direction: column;
-  min-height: auto;
-}
-
-.home-content {
-  flex-grow: 0;
-  max-width: 800px;
-  margin: 30px auto;
-  background: white;
-  padding: 25px 30px;
-  border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(100, 116, 139, 0.15);
-}
-
-.home-card-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 24px;
-  padding: 32px;
-  justify-items: center;
+  color: #fff;
 }
 
 .home-title {
-  font-size: 2rem;
-  font-weight: 600;
+  font-size: 2.2rem;
+  font-weight: 700;
   text-align: center;
-  background: var(--primary-darkest);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: fadeIn 1s ease-in-out;
+  color: white;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  margin-bottom: 0.5rem;
+  margin: 2rem auto 1.5rem auto;
+  padding: 1rem 2rem;
+  background: var(--primary-darkest); 
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+  width: fit-content;
+  backdrop-filter: blur(4px);
+  transition: transform 0.3s ease;
+}
+
+.home-title:hover {
+  transform: scale(1.02);
 }
 
 
-.text-secondary {
-  color: #007acc; /* Cambialo si querés otro color */
+
+
+
+
+/* Responsive */
+@media (max-width: 600px) {
+  .slick-slide > div {
+    padding: 10px;
+    max-width: 100%;
+  }
+
+  .home-title {
+    font-size: 1.5rem;
+  }
 }
