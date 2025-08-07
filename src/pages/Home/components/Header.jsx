@@ -47,7 +47,7 @@ const handleLogout = () => {
             gap: "4px",
           }}
         >
-          <LogoutIcon fontSize="small"  sx={{color: 'var(--primary-header)'}} />
+          <LogoutIcon fontSize="small"  sx={{color: ' var(--primary-light);'}} />
           Salir del Portfolio
         </NavLink>
       </nav>

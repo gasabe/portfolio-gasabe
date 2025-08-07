@@ -1,41 +1,62 @@
 import React from "react";
-import "../styles/Home.css";
-import ProjectCard from "../../Components/Card";
-import ubertoPic from "../../../../public/uberto.png";
-import merendappPic from "../../../../public/merendapp.jpg";
-import readappPic from "../../../../public/readapp.png";
-import tallerPic from "../../../../public/taller.jpg";
+import Slider from "react-slick";
+import ProjectCard from "../../Components/Card.jsx";
+
+// Estilos necesarios
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 export default function Projects() {
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    arrows: true,
+    responsive: [
+      { breakpoint: 960, settings: { slidesToShow: 2 } },
+      { breakpoint: 600, settings: { slidesToShow: 1 } },
+    ],
+  };
+
   return (
-    <section className="home-container">
+    <section style={{ width: "100%", padding: "2rem 0" }}>
       <h2 className="home-title">Proyectos</h2>
-      <div className="home-card-container">
-        <ProjectCard
-          title="Gestor de Libros"
-          description="App en React + Spring Boot para gestionar recomendaciones de libros"
-          image={readappPic}
-          repoLink="https://github.com/gasabe/React-ReadApp.git"
-        />
-        <ProjectCard
-          title="Uberto"
-          description="App en React + Spring Boot para gestionar recomendaciones de contratar un autos"
-          image={ubertoPic}
-          repoLink="https://github.com/gasabe/Frontend-Uberto-2025.git"
-        />
-        <ProjectCard
-          title="MerenApp"
-          description="App en React + Spring Boot para gestionar donaciones a comedores"
-          image={merendappPic}
-          repoLink="https://github.com/Unsam-LosPerris/MerendApp-Front.git"
-        />
-        <ProjectCard
-          title="Taller"
-          description="App en React para gestionar un taller mecánico"
-          image={tallerPic}
-          repoLink="https://taller-mecanico-the-friends.netlify.app/"
-        />
-      </div>
+      <Slider {...settings}>
+        <div>
+          <ProjectCard
+            title="Gestor de Libros"
+            description="App en React + Spring Boot para gestionar recomendaciones de libros"
+            image="/readapp.png"
+            repoLink="https://github.com/gasabe/React-ReadApp.git"
+          />
+        </div>
+        <div>
+          <ProjectCard
+            title="Uberto"
+            description="App en React + Spring Boot para contratar autos"
+            image="/uberto.png"
+            repoLink="https://github.com/gasabe/Frontend-Uberto-2025.git"
+          />
+        </div>
+        <div>
+          <ProjectCard
+            title="MerenApp"
+            description="App en React + Spring Boot para gestionar donaciones a comedores"
+            image="/merendapp.jpg"
+            repoLink="https://github.com/Unsam-LosPerris/MerendApp-Front.git"
+          />
+        </div>
+        <div>
+          <ProjectCard
+            title="Taller"
+            description="App en React para gestionar un taller mecánico"
+            image="/taller.jpg"
+            repoLink="https://taller-mecanico-the-friends.netlify.app/"
+          />
+        </div>
+      </Slider>
     </section>
   );
 }
