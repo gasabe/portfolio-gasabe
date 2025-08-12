@@ -38,7 +38,6 @@
   overflow: hidden;
 }
 
-/* Estilos generales */
 body {
   margin: 0;
   background: #f5f7fa;
@@ -47,14 +46,14 @@ body {
 }
 
 .home-title {
-  font-size: 2.2rem;
+  font-size: 2.5rem !important;
   font-weight: 700;
   text-align: center;
   color: white;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin: 2rem auto 1.5rem auto;
   padding: 1rem 2rem;
-  background: var(--primary-darkest); 
+  background: linear-gradient(to bottom, var(--primary-darker), var(--primary-name));
   border-radius: 12px;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
   width: fit-content;
@@ -71,7 +70,7 @@ body {
 
 
 
-/* Responsive */
+
 @media (max-width: 600px) {
   .slick-slide > div {
     padding: 10px;

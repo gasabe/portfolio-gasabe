@@ -1,0 +1,49 @@
+.drawer-paper {
+  width: 280px;
+  background-color: var(--primary-light);
+  color: var(--primary-contrast);
+  background-color: var(--primary-darkest) !important;
+}
+
+.drawer-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+  
+}
+
+.drawer-title {
+  color: var(--primary-name);
+  font-weight: 700 !important;
+}
+
+.drawer-close-btn {
+  color: var(--primary-light);
+}
+
+.drawer-divider {
+  border-color: var(--primary-darker) !important;
+}
+
+.drawer-list {
+  padding-top: 0 !important;
+  color: var(--primary-light);
+}
+
+.drawer-item {
+  color: var(--primary-contrast);
+}
+
+.drawer-item:hover,
+.drawer-item.Mui-selected {
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.drawer-logout-icon {
+  margin-right: 8px;
+  opacity: 0.9;
+}
+.spacer {
+  margin: 8px 0 !important;
+}

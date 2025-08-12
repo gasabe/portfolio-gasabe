@@ -1,5 +1,10 @@
-import { NavLink } from "react-router-dom";
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { AppBar, Toolbar, IconButton, Typography } from "@mui/material";
+import MenuIcon from "@mui/icons-material/Menu";
 import LogoutIcon from "@mui/icons-material/Logout";
+import NavDesktop from "../components/NavDesktop.jsx";
+import NavDrawer from "../components/NavDrawer.jsx";
 import "../styles/Header.css";
 
 const links = [
@@ -10,47 +15,51 @@ const links = [
 ];
 
 export default function Header() {
+  const [open, setOpen] = useState(false);
+  const navigate = useNavigate();
 
-const handleLogout = () => {
-  localStorage.removeItem('loggedIn');
-  window.dispatchEvent(new Event('storage')); 
-  window.location.href = '/login'; 
-};
+  const handleLogout = () => {
+    localStorage.removeItem("loggedIn");
+    window.dispatchEvent(new Event("storage"));
+    navigate("/login", { replace: true });
+  };
 
   return (
-    <header className="header">
-      <h1 className="header-title">Portfolio</h1>
-      <nav className="nav-links">
-        {links.map(({ id, label }) => (
-          <NavLink
-            key={id}
-            to={`/home/${id}`}
-            className={({ isActive }) =>
-              `nav-button ${isActive ? "active" : ""}`
-            }
-            style={{ textDecoration: "none" }}
+    <>
+      <AppBar position="sticky" elevation={0} className="header-appbar">
+        <Toolbar className="header-toolbar">
+          <IconButton
+            edge="start"
+            onClick={() => setOpen(true)}
+            aria-label="Abrir menú"
+            className="hamburger-btn"
           >
-            {label}
-          </NavLink>
-        ))}
-        <NavLink
-          onClick={(e) => {
-            e.preventDefault();
-            handleLogout();
-          }}
-          to="/login"
-          className="nav-button logout-button"
-          style={{
-            textDecoration: "none",
-            display: "flex",
-            alignItems: "center",
-            gap: "4px",
-          }}
-        >
-          <LogoutIcon fontSize="small"  sx={{color: ' var(--primary-light);'}} />
-          Salir del Portfolio
-        </NavLink>
-      </nav>
-    </header>
+            <MenuIcon />
+          </IconButton>
+
+          <Typography variant="h6" className="header-title">
+            Portfolio
+          </Typography>
+
+          <div className="header-actions-desktop">
+            <NavDesktop links={links} onLogout={handleLogout} />
+          </div>
+
+          <div className="header-actions-mobile">
+            <IconButton onClick={handleLogout} aria-label="Salir">
+              <LogoutIcon />
+            </IconButton>
+          </div>
+        </Toolbar>
+      </AppBar>
+
+      <NavDrawer
+        open={open}
+        onClose={() => setOpen(false)}
+        links={links}
+        onNavigate={() => setOpen(false)}
+        onLogout={handleLogout}
+      />
+    </>
   );
 }
