@@ -1,4 +1,13 @@
-/* ====== NUEVO: layout del toolbar ====== */
+.header-appbar {
+  background-color: var(--primary-darkest) !important;
+  color: var(--primary-contrast) !important;
+}
+
+.header-appbar .MuiToolbar-root {
+  background-color: var(--primary-darkest) !important;
+  color: var(--primary-contrast) !important;
+}
+
 .header-toolbar {
   display: flex;
   align-items: center;
@@ -7,64 +16,34 @@
   padding: 0 16px;
 }
 
-/* ====== NUEVO: título (para armonizar con tus variables) ====== */
-.header-title-text {
-  color: var(--primary-light);
+.header-title {
+  color: var(--primary-contrast) !important;
+  font-weight: 700 !important;
 }
 
-/* ====== NUEVO: botón hamburguesa visible solo en mobile ====== */
+.header-appbar .MuiIconButton-root,
+.header-appbar .MuiSvgIcon-root {
+  color: var(--primary-contrast) !important;
+}
+
 .hamburger-btn {
   display: inline-flex;
 }
+.header-actions-desktop {
+  display: none;
+}
+.header-actions-mobile {
+  display: inline-flex;
+}
+
 @media (min-width: 768px) {
   .hamburger-btn {
     display: none;
   }
-}
-
-/* ====== NUEVO: nav de escritorio ====== */
-.nav-links-desktop {
-  display: none;
-  gap: 12px;
-  align-items: center;
-}
-@media (min-width: 768px) {
-  .nav-links-desktop {
-    display: flex;
+  .header-actions-desktop {
+    display: inline-flex;
   }
-}
-
-/* Reuso tus clases .nav-button, .active, .logout-button si ya existen.
-   Si no, podés mantener estas aproximaciones: */
-.nav-button {
-  padding: 8px 12px;
-  border-radius: 8px;
-  color: var(--primary-light);
-  background: transparent;
-  border: 1px solid transparent;
-  cursor: pointer;
-  font-weight: 600;
-}
-.nav-button:hover {
-  background: var(--primary-darker);
-  border-color: var(--neutral-800);
-}
-.nav-button.active {
-  background: var(--primary-accent);
-  color: var(--primary-contrast);
-}
-
-.logout-button {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-}
-
-/* ====== NUEVO: items del Drawer ====== */
-.drawer-item {
-  color: var(--primary-contrast);
-}
-.drawer-item.Mui-selected,
-.drawer-item:hover {
-  background: rgba(255, 255, 255, 0.06);
+  .header-actions-mobile {
+    display: none;
+  }
 }

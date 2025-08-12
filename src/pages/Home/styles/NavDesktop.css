@@ -1,0 +1,36 @@
+.nav-links-desktop {
+  display: inline-flex;
+  gap: 12px;
+  align-items: center;
+}
+
+/* Botones */
+.nav-button {
+  padding: 8px 12px;
+  border-radius: 8px;
+  color: var(--primary-light);
+  background: transparent;
+  border: 1px solid transparent;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.nav-button:hover {
+  background: var(--primary-darker);
+  border-color: var(--neutral-800);
+}
+
+.nav-button.active {
+  background: linear-gradient(
+    to bottom,
+    var(--primary-darker),
+    var(--primary-name)
+  );
+  color: var(--primary-contrast);
+}
+
+.logout-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
