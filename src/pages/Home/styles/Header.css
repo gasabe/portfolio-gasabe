@@ -1,72 +1,70 @@
-:root {
-  --primary-header: #3fc4b2; /*#FE6B8B Color del gradiente */
-  --primary-name-header: #5d64c4;
-    /* FF8E53 Color del gradiente */
-}
-
-.header {
-  background: var(--primary-darkest); 
-  color: var(--primary-light);
-  padding: 25px 20px;
-  text-align: center;
-  border-radius: 0 0 8px 8px;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-.header-title {
-  font-size: 2rem;
-  font-weight: 600;
-  text-align: center;
-  background: var(--primary-light);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: fadeIn 1s ease-in-out;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  margin: 0 0 15px 0;
-}
-
-.nav-links {
+/* ====== NUEVO: layout del toolbar ====== */
+.header-toolbar {
   display: flex;
-  justify-content: center;
-  gap: 15px;
-  flex-wrap: wrap;
-  animation: fadeIn 1s ease-in-out;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 64px;
+  padding: 0 16px;
 }
 
+/* ====== NUEVO: título (para armonizar con tus variables) ====== */
+.header-title-text {
+  color: var(--primary-light);
+}
+
+/* ====== NUEVO: botón hamburguesa visible solo en mobile ====== */
+.hamburger-btn {
+  display: inline-flex;
+}
+@media (min-width: 768px) {
+  .hamburger-btn {
+    display: none;
+  }
+}
+
+/* ====== NUEVO: nav de escritorio ====== */
+.nav-links-desktop {
+  display: none;
+  gap: 12px;
+  align-items: center;
+}
+@media (min-width: 768px) {
+  .nav-links-desktop {
+    display: flex;
+  }
+}
+
+/* Reuso tus clases .nav-button, .active, .logout-button si ya existen.
+   Si no, podés mantener estas aproximaciones: */
 .nav-button {
-  background: none;
-  border: none;
-  color: #94a3b8;
-  font-weight: 600;
-  font-size: 1.1rem;
+  padding: 8px 12px;
+  border-radius: 8px;
+  color: var(--primary-light);
+  background: transparent;
+  border: 1px solid transparent;
   cursor: pointer;
-  padding: 8px 15px;
-  border-radius: 5px;
-  transition: background-color 0.2s, color 0.2s;
-  background: var(--primary-light);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
+  font-weight: 600;
 }
-
 .nav-button:hover {
-  background-color: #334155;
-  background: linear-gradient(45deg, var(--primary-header), var(--primary-name-header));
-  -webkit-background-clip: text;
-  background-clip: text;
+  background: var(--primary-darker);
+  border-color: var(--neutral-800);
 }
-
 .nav-button.active {
-  color: #3b82f6;
-  background-color: #1e40af;
-  background: linear-gradient(45deg, var(--primary-header), var(--primary-name-header));
-  -webkit-background-clip: text;
-  background-clip: text;
+  background: var(--primary-accent);
+  color: var(--primary-contrast);
 }
 
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(-10px); }
-  to { opacity: 1; transform: translateY(0); }
+.logout-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* ====== NUEVO: items del Drawer ====== */
+.drawer-item {
+  color: var(--primary-contrast);
+}
+.drawer-item.Mui-selected,
+.drawer-item:hover {
+  background: rgba(255, 255, 255, 0.06);
 }
