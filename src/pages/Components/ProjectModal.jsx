@@ -17,7 +17,7 @@ export default function ProjectModal({ project, onClose }) {
   return (
     <div className="modal-backdrop" onClick={onClose}>
       <div className="modal-content" onClick={e => e.stopPropagation()}>
-        <button className="modal-close" onClick={onClose}>×</button>
+        <button className="modal-close" onClick={onClose}autoFocus>×</button>
         <h2>{project.title}</h2>
         <Slider {...settings}>
           {project.screenshots.map((img, i) => (

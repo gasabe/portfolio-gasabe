@@ -18,7 +18,7 @@
 }
 
 .modal-content {
-  background: var(--primary-transparte);
+  background: var(--primary-transparte)!important;
   border-radius: 16px;
   padding: 2rem;
   max-width: 700px;
