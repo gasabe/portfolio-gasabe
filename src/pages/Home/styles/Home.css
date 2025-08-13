@@ -110,6 +110,19 @@ body {
 .home-title:hover {
   transform: scale(1.02);
 }
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 0.5rem 0;
+}
+
+.contact-icon {
+  width: 4rem;
+  height: 4rem;
+  object-fit: contain;
+}
+
 
 @media (max-width: 600px) {
   .slick-slide > div {
