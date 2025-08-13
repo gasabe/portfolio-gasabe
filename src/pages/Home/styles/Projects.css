@@ -13,8 +13,6 @@
   padding: 1rem 0;
 }
 
-
-
 .home-title:hover {
   transform: scale(1.02);
 }
@@ -105,8 +103,16 @@
 }
 
 /* Responsive */
-@media (max-width: 480px) {
+@media (max-width: 600px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
   .modal-content {
-    padding: 1rem;
+    width: 80%;
+    position: fixed;
+  }
+  .modal-close-btn {
+    top: 2rem;
+    right: 1rem;
   }
 }
