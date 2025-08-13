@@ -1,3 +1,5 @@
+
+
 .header-appbar {
   background-color: var(--primary-darkest) !important;
   color: var(--primary-contrast) !important;
@@ -17,7 +19,7 @@
 }
 
 .header-title {
-  color: var(--primary-contrast) !important;
+  color: var(--primary-name) !important;
   font-weight: 700 !important;
 }
 

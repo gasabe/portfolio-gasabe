@@ -1,4 +1,10 @@
-/* Layout general */
+h2 {
+  color: var(--primary-board);
+}
+h3 {
+  color: var(--primary-name);
+}
+
 .app-container {
   display: flex;
   flex-direction: column;
@@ -6,7 +12,6 @@
   background: linear-gradient(to bottom, #0f2027, #203a43, #2c5364);
 }
 
-/* Área principal donde se renderiza cada subpágina */
 .main-content {
   flex: 1;
   display: flex;
@@ -16,13 +21,26 @@
   width: 100%;
   box-sizing: border-box;
 }
+.home-container {
+  display: block;
+  margin: 1rem auto 0;
+  padding: 0.75rem 1.5rem;
 
-/* Carrusel centrado y responsive */
+  background: rgba(20, 25, 55, 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+  font-weight: bold;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
 .slick-slide {
   display: flex !important;
   justify-content: center;
   box-sizing: border-box;
-
 }
 
 .slick-slide > div {
@@ -41,7 +59,7 @@
 body {
   margin: 0;
   background: #f5f7fa;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   color: #fff;
 }
 
@@ -50,26 +68,48 @@ body {
   font-weight: 700;
   text-align: center;
   color: white;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  margin: 2rem auto 1.5rem auto;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0.5rem auto 1rem auto;
   padding: 1rem 2rem;
-  background: linear-gradient(to bottom, var(--primary-darker), var(--primary-name));
+  background: linear-gradient(
+    to bottom,
+    var(--primary-darker),
+    var(--primary-name)
+  );
   border-radius: 12px;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
   width: fit-content;
   backdrop-filter: blur(4px);
   transition: transform 0.3s ease;
 }
+.conocimientos-list {
+  list-style: none;
+  padding: 0;
+}
+
+.conocimientos-list li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.4rem;
+}
+
+.educacion-item {
+  display: flex;
+  align-items: center;
+  gap: 1.75rem;
+  margin-bottom: 1rem;
+}
+
+.logo-edu {
+  width: 6rem;
+  height: 6rem;
+  object-fit: contain;
+}
 
 .home-title:hover {
   transform: scale(1.02);
 }
-
-
-
-
-
-
 
 @media (max-width: 600px) {
   .slick-slide > div {
@@ -79,5 +119,14 @@ body {
 
   .home-title {
     font-size: 1.5rem;
+  }
+  .conocimientos-list li {
+    align-items: flex-start;
+    gap: 0.4rem;
+    font-size: 0.9rem;
+  }
+
+  .conocimientos-list .icon {
+    font-size: 1rem;
   }
 }
