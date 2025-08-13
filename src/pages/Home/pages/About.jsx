@@ -1,8 +1,4 @@
 import React from "react";
-import { TypeAnimation } from "react-type-animation";
-import eetLogo from "../../../../public/eetn1.png";
-import unsamLogo from "../../../../public/logo_UNSAM.PNG"; // reemplazá con tu link
-import liceoLogo from "../../../../public/liceo.png";
 
 export default function About() {
   return (
@@ -19,7 +15,7 @@ export default function About() {
         <h2>Educación</h2>
         <article className="educacion-item">
           <img
-            src={unsamLogo} 
+            src="/logo_UNSAM.png"
             alt="Logo UNSAM"
             className="logo-edu"
           />
@@ -31,7 +27,7 @@ export default function About() {
 
         <article className="educacion-item">
           <img
-            src={eetLogo} 
+            src="/eetn1.png"
             alt="Logo EET N°1 Manuel Belgrano"
             className="logo-edu"
           />
@@ -47,7 +43,7 @@ export default function About() {
         <h2>Cursos / Idiomas</h2>
         <article className="educacion-item">
           <img
-            src={liceoLogo}
+            src="/liceo.png"
             alt="Logo Liceo Británico"
             className="logo-edu"
           />
