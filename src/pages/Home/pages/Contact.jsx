@@ -22,14 +22,8 @@ export default function Contact() {
         <div className="contact-item">
           <img src="../gmail.png" alt="Email" className="contact-icon" />
           <div className="list">
-            <a href="mailto:abelardogaston@gmail.com">
-              abelardogaston@gmail.com
-            </a>
             <a href="mailto:abelardosgaston@gmail.com">
               abelardosgaston@gmail.com
-            </a>
-            <a href="mailto:gabelardo@estudiantes.unsam.edu.ar">
-              gabelardo@estudiantes.unsam.edu.ar
             </a>
           </div>
         </div>

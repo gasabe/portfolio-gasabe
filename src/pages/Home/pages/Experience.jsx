@@ -56,21 +56,29 @@ export default function Experience() {
         <ul className="conocimientos-list">
           <li>
             <span className="icon">💻</span>
-            <strong>Frontend:</strong> HTML, CSS, Angular, React (Material UI)
+            <span className="label-light">Frontend:</span>
+            <span className="value">
+              HTML, CSS, Angular, React (Material UI)
+            </span>
           </li>
           <li>
             <span className="icon">⚙️</span>
-            <strong>Backend:</strong> Python, Kotlin
+            <span className="label-light">Backend:</span>
+            <span className="value">Python, Kotlin</span>
           </li>
           <li>
             <span className="icon">🗄️</span>
-            <strong>Bases de datos:</strong> MongoDB, PostgreSQL, Diseño de
-            esquemas y consultas SQL
+            <span className="label-light">Bases de datos:</span>
+            <span className="value">
+              MongoDB, PostgreSQL, Diseño de esquemas y consultas SQL
+            </span>
           </li>
           <li>
             <span className="icon">🛠️</span>
-            <strong>Otros:</strong> C, Assembly, reparación/ensamblaje de PC,
-            Paquete Office
+            <span className="label-light">Otros:</span>
+            <span className="value">
+              C, Assembly, reparación/ensamblaje de PC, Paquete Office
+            </span>
           </li>
         </ul>
       </div>

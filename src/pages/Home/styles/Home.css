@@ -5,6 +5,12 @@ h3 {
   color: var(--primary-name);
 }
 
+.label-light {
+  font-weight: 400;
+  color: var(--primary-board);
+  white-space: nowrap;
+}
+
 .app-container {
   display: flex;
   flex-direction: column;
@@ -103,29 +109,24 @@ body {
 }
 
 .conocimientos-list li {
-  display: flex;
-  align-items: flex-start;
-  gap: 0.8rem;
+  display: grid;
+  grid-template-columns: 22px 150px 1fr; /* icono | label | valor */
+  column-gap: 0.8rem;
+  align-items: start;
   margin-bottom: 0.9rem;
   line-height: 1.45;
 }
 
 .conocimientos-list li .icon {
-  flex: 0 0 22px;
   text-align: center;
   font-size: 1.15rem;
   margin-top: 0.15rem;
 }
 
-.conocimientos-list li strong {
-  flex: 0 0 120px;
-  font-weight: 700;
-}
-
-.conocimientos-list li span {
-  flex: 1 1 auto;
-  display: block;
-  word-break: break-word;
+.value {
+  word-break: normal;
+  overflow-wrap: anywhere;
+  line-height: 1.5;
 }
 
 .educacion-item {
@@ -204,18 +205,12 @@ body {
   }
 
   .conocimientos-list li {
-    gap: 0.6rem;
-    margin-bottom: 1rem;
-    line-height: 1.5;
+    grid-template-columns: 22px 120px 1fr; /* ajusto label en mobile */
   }
 
   .conocimientos-list li .icon {
     flex-basis: 20px;
     font-size: 1.05rem;
-  }
-
-  .conocimientos-list li strong {
-    flex-basis: 96px;
   }
 
   .home-container {
