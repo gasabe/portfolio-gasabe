@@ -9,31 +9,38 @@ export default function Projects() {
   const projectList = [
     {
       title: "Gestor de Libros",
-      description: "App en React + Spring Boot para gestionar recomendaciones de libros",
+      description:
+        "App en React + Spring Boot para gestionar recomendaciones de libros",
       cover: "/readapp.png",
       screenshots: ["/readapp.png", "/readapp-2.png", "/readapp-3.png"],
-      repoLink: "https://github.com/gasabe/React-ReadApp.git"
+      repoLink: "https://github.com/gasabe/React-ReadApp.git",
     },
     {
       title: "Uberto",
       description: "App en React + Spring Boot para contratar autos",
       cover: "/uberto.png",
-      screenshots: ["/uberto.png", "/uberto-2.png", "/uberto-3.png"],
-      repoLink: "https://github.com/gasabe/Frontend-Uberto-2025.git"
+      screenshots: [
+        "/uberto-demo0.gif",
+        "/uberto-demo1.gif",
+        "/uberto-demo2.gif",
+        "/uberto-demo3.gif",
+      ],
+      repoLink: "https://github.com/gasabe/Frontend-Uberto-2025.git",
     },
     {
       title: "MerenApp",
-      description: "App en React + Spring Boot para gestionar donaciones a comedores",
+      description:
+        "App en React + Spring Boot para gestionar donaciones a comedores",
       cover: "/merendapp.jpg",
       screenshots: ["/merendapp.jpg", "/merendapp-2.jpg"],
-      repoLink: "https://github.com/Unsam-LosPerris/MerendApp-Front.git"
+      repoLink: "https://github.com/Unsam-LosPerris/MerendApp-Front.git",
     },
     {
       title: "Taller",
       description: "App en React para gestionar un taller mecánico",
       cover: "/taller.jpg",
       screenshots: ["/taller.jpg", "/taller-2.jpg"],
-      repoLink: "https://taller-mecanico-the-friends.netlify.app/"
+      repoLink: "https://taller-mecanico-the-friends.netlify.app/",
     },
   ];
 
