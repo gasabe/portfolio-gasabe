@@ -10,9 +10,20 @@ export default function Projects() {
     {
       title: "Gestor de Libros",
       description:
-        "App en React + Spring Boot para gestionar recomendaciones de libros",
+        " Primera App en React + Spring Boot para gestionar recomendaciones de libros, hecha en la Unsam junto a ms compañeros.",
       cover: "/readapp.png",
-      screenshots: ["/readapp.png", "/readapp-2.png", "/readapp-3.png"],
+      screenshots: [
+        "/readapp login.png",
+        "/readapp home admin.png",
+        "/readapp libros.png",
+        "/readapp libro no existe.png",
+        "/readapp editar libro.png",
+        "/readapp autores gas.png",
+        "/readapp autores.png",
+        "/readapp editar autor.png",
+        "/readapp eliminar autor.png",
+      ],
+
       repoLink: "https://github.com/gasabe/React-ReadApp.git",
     },
     {
