@@ -1,95 +1,84 @@
-# Getting Started with Create React App
+# Portfolio — Gastón Ezequiel Abelardo
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Portfolio personal desarrollado con **React 19** y **Vite 7**, donde presento mi experiencia profesional, proyectos, formación académica y datos de contacto.
 
-## Available Scripts
+## Demo
 
-In the project directory, you can run:
+La aplicación inicia con una pantalla de bienvenida animada y, al hacer clic en **"Conocer más"**, se accede al contenido principal del portfolio.
 
-### `npm start`
+## Tecnologías
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+| Categoría | Herramientas |
+|---|---|
+| Framework | React 19, Vite 7 |
+| Routing | React Router DOM v7 (rutas anidadas) |
+| UI Components | Material UI v7 (AppBar, Drawer, Button, etc.) |
+| Estilos | CSS custom properties, Tailwind CSS v4 |
+| Animaciones | react-type-animation, CSS keyframes |
+| Carrusel | react-slick + slick-carousel |
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Estructura del proyecto
 
-### `npm test`
+```
+src/
+├── App.jsx                    # Definición de rutas
+├── main.jsx                   # Entry point (Vite)
+├── index.css                  # Estilos globales
+└── pages/
+    ├── Components/
+    │   ├── Card.jsx           # Tarjeta de proyecto reutilizable
+    │   └── ProjectModal.jsx   # Modal con carrusel de capturas
+    ├── Home/
+    │   ├── Home.jsx           # Layout principal (Header + Outlet + Footer)
+    │   ├── components/
+    │   │   ├── Header.jsx     # Barra de navegación superior
+    │   │   ├── Footer.jsx     # Pie de página
+    │   │   ├── NavDesktop.jsx # Navegación horizontal (desktop)
+    │   │   └── NavDrawer.jsx  # Navegación lateral (mobile)
+    │   ├── pages/
+    │   │   ├── Experience.jsx # Experiencia laboral y habilidades
+    │   │   ├── Projects.jsx   # Galería de proyectos
+    │   │   ├── About.jsx      # Biografía y formación académica
+    │   │   └── Contact.jsx    # Links de contacto
+    │   └── styles/            # CSS por componente
+    └── Login/
+        └── screens/
+            ├── Login.jsx      # Pantalla de bienvenida
+            └── Login.css
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Secciones
 
-### `npm run build`
+- **Experiencia**: Historial laboral con descripción de roles y una grilla de habilidades técnicas (Frontend, Backend, Bases de datos).
+- **Proyectos**: Tarjetas con imagen, descripción y modal detallado con carrusel de capturas y enlace a GitHub.
+- **Sobre mí**: Biografía, formación académica (UNSAM, EET N°1) e idiomas.
+- **Contacto**: Links directos a WhatsApp, Gmail, LinkedIn y GitHub.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Instalación
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```bash
+# Clonar el repositorio
+git clone https://github.com/gasabe/portfolio-gasabe.git
+cd portfolio-gasabe
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+# Instalar dependencias
+npm install
 
-### `npm run eject`
+# Iniciar en modo desarrollo
+npm run dev
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Scripts disponibles
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+| Comando | Descripción |
+|---|---|
+| `npm run dev` | Servidor de desarrollo con hot reload |
+| `npm run build` | Build de producción |
+| `npm run preview` | Previsualización del build |
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Autor
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+**Gastón Ezequiel Abelardo** — Técnico en Programación Informática (UNSAM) · Técnico en Electrónica (EET N°1)
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-
-
-
-
-https://github.com/user-attachments/assets/3e3438bd-51d9-4ce2-9e1b-7d398a46dd19
-
-
-https://github.com/user-attachments/assets/b8a7cb5a-591a-4189-9608-26196f5d7fc0
-
-
-
-https://github.com/user-attachments/assets/1b1f2862-b605-4866-af06-7bab5bb03cec
-
-
-
-https://github.com/user-attachments/assets/d6fd0781-f5e0-4add-9337-9eb6e78aed0c
-
-
-
-https://github.com/user-attachments/assets/b8ca5a29-be27-4dfb-a977-3691cffd2922
-
-
-
-
-
+- [GitHub](https://github.com/gasabe)
+- [LinkedIn](https://www.linkedin.com/in/gaston-ezequiel-abelardo-680b12187/)
