@@ -82,3 +82,21 @@ npm run dev
 
 - [GitHub](https://github.com/gasabe)
 - [LinkedIn](https://www.linkedin.com/in/gaston-ezequiel-abelardo-680b12187/)
+
+
+https://github.com/user-attachments/assets/3e3438bd-51d9-4ce2-9e1b-7d398a46dd19
+
+
+https://github.com/user-attachments/assets/b8a7cb5a-591a-4189-9608-26196f5d7fc0
+
+
+
+https://github.com/user-attachments/assets/1b1f2862-b605-4866-af06-7bab5bb03cec
+
+
+
+https://github.com/user-attachments/assets/d6fd0781-f5e0-4add-9337-9eb6e78aed0c
+
+
+
+https://github.com/user-attachments/assets/b8ca5a29-be27-4dfb-a977-3691cffd2922
