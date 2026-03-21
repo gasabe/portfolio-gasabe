@@ -5,25 +5,6 @@ export default function Experience() {
   return (
     <section className="home-container">
       <div className="home-content">
-        <h1>
-          "Si puedes pensarlo, <span></span>
-          <TypeAnimation
-            sequence={[
-              'podes programarlo"',
-              1000,
-              'podes optimizarlo"',
-              1000,
-              'podes implementarlo"',
-              1000,
-              'podes desarrollarlo"',
-              1000,
-              'podes lograrlo"',
-              1000,
-            ]}
-            speed={50}
-            repeat={Infinity}
-          />
-        </h1>
         <h2>Experiencia</h2>
         <article>
           <h3>Analista de Costos — Trafind BE‑KE (2023–2025)</h3>
